@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="test.css">
+<head>
+    <title>Mana Regen Calculator</title>
+    <script type="text/javascript">
+        function calc() {
+            var level = document.getElementById('lvl').value;
+            document.getElementById('level').innerText = "[Level " + level + "]";
+            var spirit = document.getElementById('spr').value;
+            document.getElementById('spirit').innerText = "[" + spirit + " Spirit]";
+            var regen = Math.floor(1 + ((3 + Number(level) + Number(spirit)) / 20));
+            document.getElementById('regen').innerText = "[" + regen + " Mana]";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Soul's Remnant Online</h1>
+    <h2>Mana regen Calculator</h2>
+    <div>
+        <label for="lvl">Level</label>
+        <input type="text" id="lvl" value="1"><br>
+        <label for="spr">Spirit</label>
+        <input type="text" id="spr" value="0"><br>
+        <button type="button" onclick="calc()">Calculate</button>
+        <br><br>
+        <span>You will regenerate </span>
+        <span id="regen">[1 Mana]</span>
+        <span> at </span>
+        <span id="level">[Level 1]</span>
+        <span> with </span>
+        <span id="spirit">[0 Spirit]</span>
+        <span>.</span>
+    </div>
+    <footer>By Jack#9977</footer>
+</body>
+
+</html>
